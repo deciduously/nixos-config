@@ -68,7 +68,7 @@ inputs.nixpkgs.lib.nixosSystem {
                 insmod fat
                 insmod search_fs_uuid
                 insmod chain
-                search --fs-uuid --set-root AE24-DE84
+                search --fs-uuid --set-root 97F0-4842
                 chainloader /EFI/Microsoft/Boot/bootmgfw.efi
               }
             '';
@@ -76,7 +76,7 @@ inputs.nixpkgs.lib.nixosSystem {
         };
       };
       fileSystems."/boot" = {
-        device = "AE24-DE84";
+        device = "/dev/disk/by-uuid/97F0-4842";
         fsType = "vfat";
       };
       fileSystems."/" = {

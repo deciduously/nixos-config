@@ -48,7 +48,7 @@ inputs.nixpkgs.lib.nixosSystem {
           "quiet"
           "udev.log_priority=3"
           "mem_sleep_default=deep"
-          "nvidia-drm.modeset=1"
+          #"nvidia-drm.modeset=1"
         ];
         kernel.sysctl = {
           "fs.inotify.max_user_watches" = "524288";
@@ -99,6 +99,7 @@ inputs.nixpkgs.lib.nixosSystem {
       ];
       sound.enable = true;
       hardware.pulseaudio.enable = false; #uses pipewire instead
+      hardware.nvidia.modesetting.enable = true;
       services = {
         xserver = {
 	  dpi = 180;          

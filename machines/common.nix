@@ -57,7 +57,7 @@ inputs:
     kmscon = {
       enable = true;
       hwRender = true;
-      extraOptions = "--font-dpi=192";
+      #extraOptions = "--font-dpi=192";
     };
     openssh = {
       enable = true;

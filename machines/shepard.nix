@@ -48,7 +48,6 @@ inputs.nixpkgs.lib.nixosSystem {
           "quiet"
           "udev.log_priority=3"
           "mem_sleep_default=deep"
-          #"nvidia-drm.modeset=1"
         ];
         kernel.sysctl = {
           "fs.inotify.max_user_watches" = "524288";
@@ -90,7 +89,7 @@ inputs.nixpkgs.lib.nixosSystem {
         fsType = "btrfs";
       };
       fileSystems."/mnt/shared" = {
-        device = "/dev/by-uuid/70664E31664DF87C";
+        device = "/dev/disk/by-uuid/70664E31664DF87C";
         fsType = "ntfs";
         options = [ "rw" "uid=1000"];
       };

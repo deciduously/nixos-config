@@ -109,11 +109,11 @@
     ];
     userSettings = {
       "editor.codeActionsOnSave" = { "source.fixAll" = true; };
-      "editor.codeLens" = false;
+      "editor.codeLens" = true;
       "editor.find.cursorMoveOnType" = false;
       "editor.fontSize" = 16;
       "editor.formatOnSave" = true;
-      "editor.minimap.enabled" = false;
+      "editor.minimap.enabled" = true;
       "editor.multiCursorModifier" = "ctrlCmd";
       "editor.renderFinalNewline" = false;
       "editor.renderWhitespace" = "all";
@@ -132,14 +132,14 @@
       "javascript.updateImportsOnFileMove.enabled" = "always";
       "liveshare.showVerboseNotifications" = false;
       "remote.SSH.useLocalServer" = false;
-      "rust-analyzer.inlayHints.enable" = false;
+      "rust-analyzer.inlayHints.enable" = true;
       "typescript.updateImportsOnFileMove.enabled" = "always";
       "update.mode" = "none";
       "vim.sneak" = true;
       "vim.useSystemClipboard" = true;
       "window.menuBarVisibility" = "toggle";
       "window.zoomLevel" = 1;
-      "workbench.activityBar.visible" = false;
+      "workbench.activityBar.visible" = true;
       "workbench.colorTheme" = "Tangram";
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;

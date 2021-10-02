@@ -9,7 +9,7 @@
     cmake
     cowsay
     deno
-    #dnsutils
+    dnsutils
     elixir
     exa
     fd
@@ -21,7 +21,7 @@
     gnumake
     hexyl
     htop
-    #hyperfine
+    hyperfine
     #inputs.status.defaultPackage.${system}
     inputs.tangram.defaultPackage.${system}
     jq
@@ -44,7 +44,7 @@
     usbutils
     vim
     #wally-cli
-    #xh
+    xh
     zig
   ];
 }

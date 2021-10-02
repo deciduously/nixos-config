@@ -16,9 +16,9 @@ inputs.nixpkgs.lib.nixosSystem {
           enable = true;
           interfaces = [ "wlp4s0" ];
           networks."Wifi 2: Straight To Video-5G".pskRaw = "178cce712be37708dc23d7ca5a95da437037c509fcff6f611c5b3744aafd58f9";
-          networks."Wifi 2: Straight To Video-5G".priority = 1;
+          #networks."Wifi 2: Straight To Video-5G".priority = 1;
           networks."Wifi 2: Straight To Video".pskRaw = "b77362f8dedf9fc8cb3eb51c0b3e5245fb4283524278e7323f6a8bea71af21ec";
-          networks."Wifi 2: Straight To Video".priority = 2;
+          #networks."Wifi 2: Straight To Video".priority = 2;
           userControlled = {
             enable = true;
             group = "wheel";
@@ -40,7 +40,7 @@ inputs.nixpkgs.lib.nixosSystem {
             "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"
           ];
           kernelModules = [ ];
-          #luks.devices.crypt.device = "/dev/sda2";
+          luks.devices.crypt.device = "/dev/nvme0n1p6";
           verbose = false;
         };
         kernelModules = [ "kvm-intel" ];
@@ -80,20 +80,20 @@ inputs.nixpkgs.lib.nixosSystem {
         fsType = "vfat";
       };
       fileSystems."/" = {
-        device = "/dev/disk/by-uuid/38c219d6-4cd0-4168-9a67-f97b7d54798e";
+        device = "/dev/mapper/vg-root";
         fsType = "btrfs";
       };
-      #fileSystems."/home" = {
-      #  device = "/dev/mapper/vg-home";
-      #  fsType = "ext4";
-      #};
-      #swapDevices = [
-     #  { device = "/dev/mapper/vg-swap"; }
-      #];
+      fileSystems."/home" = {
+        device = "/dev/mapper/vg-home";
+        fsType = "btrfs";
+      };
+      swapDevices = [
+       { device = "/dev/mapper/vg-swap"; }
+      ];
       powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
       hardware.video.hidpi.enable = true;
       hardware.opengl.extraPackages = with pkgs; [
-         intel-media-driver
+         #intel-media-driver
          vaapiIntel
       ];
       sound.enable = true;

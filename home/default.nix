@@ -15,7 +15,7 @@ user:
     ./programs.nix
     ./rust.nix
     #./spotify.nix
-    #./ssh.nix
+    ./ssh.nix
     #./sway
     #./tmux
     #./vscode.nix

@@ -97,14 +97,17 @@ inputs.nixpkgs.lib.nixosSystem {
        { device = "/dev/mapper/vg-swap"; }
       ];
       #powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-      hardware.video.hidpi.enable = lib.mkDefault true;
-      hardware.opengl.extraPackages = with pkgs; [
-         intel-media-driver
-         vaapiIntel
-      ];
+      hardware = {
+        video.hidpi.enable = lib.mkDefault true;
+        opengl.extraPackages = with pkgs; [
+          intel-media-driver
+          vaapiIntel
+        ];
+        pulseaudio.enable = false; #uses pipewire instead
+        nvidia.modesetting.enable = true;
+        bluetooth.enable = true;
+      }
       sound.enable = true;
-      hardware.pulseaudio.enable = false; #uses pipewire instead
-      hardware.nvidia.modesetting.enable = true;
       services = {
         xserver = {
 	        dpi = 96;

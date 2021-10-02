@@ -106,7 +106,7 @@ inputs.nixpkgs.lib.nixosSystem {
         pulseaudio.enable = false; #uses pipewire instead
         nvidia.modesetting.enable = true;
         bluetooth.enable = true;
-      }
+      };
       sound.enable = true;
       services = {
         xserver = {

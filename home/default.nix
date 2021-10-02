@@ -2,6 +2,7 @@ user:
 { ... }: {
   imports = [
     ./alacritty.nix
+    ./bash.nix
     ./bat.nix
     (import ./firefox.nix user)
     #./fzf.nix

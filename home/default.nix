@@ -5,7 +5,7 @@ user:
     #./bat.nix
     (import ./firefox.nix user)
     #./fzf.nix
-    #(import ./git.nix user)
+    (import ./git.nix user)
     #./gpg.nix
     #./htop.nix
     #./lf
@@ -13,13 +13,13 @@ user:
     #./pass.nix
     #(import ./pim.nix user)
     ./programs.nix
-    #./rust.nix
+    ./rust.nix
     #./spotify.nix
     #./ssh.nix
     #./sway
     #./tmux
     #./vscode.nix
-    #./xdg.nix
+    ./xdg.nix
     #./zsh
   ];
 }

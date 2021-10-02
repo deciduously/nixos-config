@@ -61,9 +61,8 @@ inputs.nixpkgs.lib.nixosSystem {
             devices = [ "nodev" ];
             efiSupport = true;
             enable = true;
-            useOSProber = true;
             extraEntries = ''
-              menuEntry "Windows" {
+              menuentry "Windows" {
                 insmod part_gpt
                 insmod fat
                 insmod search_fs_uuid
@@ -72,6 +71,7 @@ inputs.nixpkgs.lib.nixosSystem {
                 chainloader /EFI/Microsoft/Boot/bootmgfw.efi
               }
             '';
+              version=2;
           };                    
         };
       };
@@ -91,12 +91,17 @@ inputs.nixpkgs.lib.nixosSystem {
      #  { device = "/dev/mapper/vg-swap"; }
       #];
       powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-      hardware.video.hidpi.enable = lib.mkDefault true;
+      hardware.video.hidpi.enable = true;
+      hardware.opengl.extraPackages = with pkgs; [
+         intel-media-driver
+         vaapiIntel
+      ];
       sound.enable = true;
       hardware.pulseaudio.enable = false; #uses pipewire instead
       services = {
         xserver = {
           enable = true;
+          videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;
           desktopManager.plasma5.enable = true;
           layout = "us";

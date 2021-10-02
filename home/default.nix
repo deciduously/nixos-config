@@ -12,7 +12,7 @@ user:
     #./neovim
     #./pass.nix
     #(import ./pim.nix user)
-    #./programs.nix
+    ./programs.nix
     #./rust.nix
     #./spotify.nix
     #./ssh.nix

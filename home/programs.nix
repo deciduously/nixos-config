@@ -24,8 +24,10 @@
     hyperfine
     #inputs.status.defaultPackage.${system}
     inputs.tangram.defaultPackage.${system}
+    jetbrains.pycharm-community
     jq
     killall
+    libreoffice-fresh
     mpv
     neovim
     nodejs-16_x

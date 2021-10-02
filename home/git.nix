@@ -28,8 +28,8 @@ user:
       };
     };
     signing = {
-      key = "";
-      signByDefault = false;
+      key = "26AFCC4B767F0686";
+      signByDefault = true;
     };
   };
 }

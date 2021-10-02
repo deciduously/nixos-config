@@ -33,6 +33,7 @@
     #obs-studio
     #openrgb
     pavucontrol
+    php
     pkg-config
     postgresql
     #pup

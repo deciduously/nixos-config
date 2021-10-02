@@ -18,7 +18,9 @@ in {
     cargo-outdated
     cargo-udeps
     linuxPackages.perf
+    pulldown-cmark
     rust
+    starship
     trunk
     wasm-bindgen-cli
   ];

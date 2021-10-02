@@ -29,7 +29,7 @@ inputs.nixpkgs.lib.nixosSystem {
         isNormalUser = true;
         createHome = true;
         extraGroups = [ "wheel" ];
-        #shell = pkgs.zsh;
+        shell = pkgs.bash;
         openssh.authorizedKeys.keyFiles = [ ../deciduously.id_ed25519.pub ];
       };
       boot = {
@@ -53,6 +53,7 @@ inputs.nixpkgs.lib.nixosSystem {
         kernel.sysctl = {
           "fs.inotify.max_user_watches" = "524288";
         };
+        supportedFilesystems = [ "ntfs" ];
         loader = {
           efi = {
             canTouchEfiVariables = true;
@@ -87,6 +88,11 @@ inputs.nixpkgs.lib.nixosSystem {
       fileSystems."/home" = {
         device = "/dev/mapper/vg-home";
         fsType = "btrfs";
+      };
+      fileSystems."/mnt/shared" = {
+        device = "/dev/by-uuid/70664E31664DF87C";
+        fsType = "ntfs";
+        options = [ "rw" "uid=1000"];
       };
       swapDevices = [
        { device = "/dev/mapper/vg-swap"; }

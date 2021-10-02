@@ -39,7 +39,7 @@ inputs.nixpkgs.lib.nixosSystem {
           availableKernelModules = [
             "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"
           ];
-          kernelModules = [ ];
+          kernelModules = [ "dm-snapshot" ];
           luks.devices.crypt.device = "/dev/nvme0n1p6";
           verbose = false;
         };
@@ -67,11 +67,11 @@ inputs.nixpkgs.lib.nixosSystem {
                 insmod fat
                 insmod search_fs_uuid
                 insmod chain
-                search --fs-uuid --set-root 97F0-4842
+                search --fs-uuid --set=root 97F0-4842
                 chainloader /EFI/Microsoft/Boot/bootmgfw.efi
               }
             '';
-              version=2;
+             version = 2;
           };                    
         };
       };
@@ -90,10 +90,10 @@ inputs.nixpkgs.lib.nixosSystem {
       swapDevices = [
        { device = "/dev/mapper/vg-swap"; }
       ];
-      powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-      hardware.video.hidpi.enable = true;
+      #powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+      hardware.video.hidpi.enable = lib.mkDefault true;
       hardware.opengl.extraPackages = with pkgs; [
-         #intel-media-driver
+         intel-media-driver
          vaapiIntel
       ];
       sound.enable = true;

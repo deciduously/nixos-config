@@ -45,20 +45,20 @@ inputs:
   hardware = {
     enableRedistributableFirmware = true;
     #keyboard.zsa.enable = true;
-    #opengl = {
-    #  enable = true;
-    #  driSupport = true;
-    #};
+    opengl = {
+      enable = true;
+      driSupport = true;
+    };
   };
 
   services = {
     #dbus.packages = with pkgs; [ gnome3.dconf gcr ];
     fwupd.enable = true;
-    #kmscon = {
-    #  enable = true;
-    #  hwRender = true;
-      #extraOptions = "--font-dpi=192";
-    #};
+    kmscon = {
+      enable = true;
+      hwRender = true;
+      extraOptions = "--font-dpi=192";
+    };
     openssh = {
       enable = true;
       openFirewall = false;

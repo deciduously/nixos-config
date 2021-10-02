@@ -102,7 +102,7 @@ inputs.nixpkgs.lib.nixosSystem {
       hardware.nvidia.modesetting.enable = true;
       services = {
         xserver = {
-	  dpi = 180;          
+	  dpi = 96;          
           enable = true;
           videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;

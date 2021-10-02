@@ -30,7 +30,7 @@ inputs.nixpkgs.lib.nixosSystem {
         createHome = true;
         extraGroups = [ "wheel" ];
         #shell = pkgs.zsh;
-        #openssh.authorizedKeys.keyFiles = [ ../nitsky.public.rsa ../isabella.public.rsa ];
+        openssh.authorizedKeys.keyFiles = [ ../deciduously.id_ed25519.pub ];
       };
       boot = {
         #blacklistedKernelModules = [ "psmouse" ];
@@ -73,7 +73,7 @@ inputs.nixpkgs.lib.nixosSystem {
               }
             '';
              version = 2;
-          };                    
+          };
         };
       };
       fileSystems."/boot" = {
@@ -102,7 +102,7 @@ inputs.nixpkgs.lib.nixosSystem {
       hardware.nvidia.modesetting.enable = true;
       services = {
         xserver = {
-	  dpi = 96;          
+	  dpi = 96;
           enable = true;
           videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;

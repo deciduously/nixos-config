@@ -1,16 +1,16 @@
 user:
 { ... }: {
   imports = [
-    #./alacritty.nix
-    #./bat.nix
+    ./alacritty.nix
+    ./bat.nix
     (import ./firefox.nix user)
     #./fzf.nix
     (import ./git.nix user)
-    #./gpg.nix
-    #./htop.nix
+    ./gpg.nix
+    ./htop.nix
     #./lf
     #./neovim
-    #./pass.nix
+    ./pass.nix
     #(import ./pim.nix user)
     ./programs.nix
     ./rust.nix
@@ -18,7 +18,7 @@ user:
     ./ssh.nix
     #./sway
     #./tmux
-    #./vscode.nix
+    ./vscode.nix
     ./xdg.nix
     #./zsh
   ];

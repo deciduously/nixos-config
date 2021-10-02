@@ -129,6 +129,7 @@ inputs:
       noto-fonts-emoji
     ];
     fontconfig = {
+      enable = true;
       defaultFonts = {
         monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
         sansSerif = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];

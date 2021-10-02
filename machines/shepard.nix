@@ -48,6 +48,7 @@ inputs.nixpkgs.lib.nixosSystem {
           "quiet"
           "udev.log_priority=3"
           "mem_sleep_default=deep"
+          "nvidia-drm.modeset=1"
         ];
         kernel.sysctl = {
           "fs.inotify.max_user_watches" = "524288";
@@ -100,6 +101,7 @@ inputs.nixpkgs.lib.nixosSystem {
       hardware.pulseaudio.enable = false; #uses pipewire instead
       services = {
         xserver = {
+	  dpi = 180;          
           enable = true;
           videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;

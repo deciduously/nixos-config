@@ -5,4 +5,11 @@
     . /etc/nixos/home/bash/bashrc
   '';
   };
+  programs.direnv = {
+    enable = true;
+    nix-direnv = {
+      enable = true;
+      enableFlakes = true;
+    };
+  };
 }

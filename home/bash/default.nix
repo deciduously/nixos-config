@@ -2,7 +2,7 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-    . /etc/nixos/home/bash/bashrc
+    . /home/deciduously/nixos-config/home/bash/bashrc
   '';
   };
   programs.direnv = {

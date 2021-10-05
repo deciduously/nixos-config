@@ -14,12 +14,12 @@ user:
     ./pass.nix
     #(import ./pim.nix user)
     ./programs.nix
-    #./rust.nix
+    ./rust.nix
     #./spotify.nix
     ./ssh.nix
     #./sway
     #./tmux
-    #./vscode.nix
+    ./vscode.nix
     ./xdg.nix
     #./zsh
   ];

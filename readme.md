@@ -1,6 +1,6 @@
 Taken from [@nitsky](https://github.com/nitsky/config)
 
-Assuming existing EFI partitiion with Windows installed at `/dev/nvme0n1p1`.  Windows C drive is at `/dev/nvme0n1p3`.  Set up `/dev/nvme0n1p4` like this:
+Assuming existing EFI partitiion with Windows installed at `/dev/nvme0n1p1`.  Windows C drive is at `/dev/nvme0n1p3`, and a reserved MS partition lives at `/dev/nvme0n1p2`.  Set up `/dev/nvme0n1p4` like this:
 
 ```
 $ sudo cryptsetup luksFormat /dev/nvme0n1p4

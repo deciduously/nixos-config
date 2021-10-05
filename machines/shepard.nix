@@ -40,7 +40,7 @@ inputs.nixpkgs.lib.nixosSystem {
             "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"
           ];
           kernelModules = [ "dm-snapshot" ];
-          luks.devices.crypt.device = "/dev/nvme0n1p6";
+          luks.devices.crypt.device = "/dev/nvme0n1p4";
           verbose = false;
         };
         kernelModules = [ "kvm-intel" ];

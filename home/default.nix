@@ -19,7 +19,7 @@ user:
     ./ssh.nix
     #./sway
     #./tmux
-    ./vscode.nix
+    #./vscode.nix
     ./xdg.nix
     #./zsh
   ];

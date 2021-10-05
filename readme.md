@@ -25,7 +25,7 @@ Then, install from the flake.
 
 ```
 $ nix-shell -p nixUnstable git
-$ nixos-install --impure --root /mnt --flake github:deciduously/nixos-config#shepard
+$ sudo nixos-install --impure --root /mnt --flake github:deciduously/nixos-config#shepard
 ```
 
 Reboot into new installation.  Then, to get the flake locally:

@@ -23,7 +23,7 @@
     htop
     hyperfine
     #inputs.status.defaultPackage.${system}
-    inputs.tangram.defaultPackage.${system}
+    #inputs.tangram.defaultPackage.${system}
     jetbrains.pycharm-community
     jq
     killall

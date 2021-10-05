@@ -28,7 +28,7 @@ user:
       };
     };
     signing = {
-      key = "26AFCC4B767F0686";
+      key = "BFE844FEB23CBE3B";
       signByDefault = true;
     };
   };

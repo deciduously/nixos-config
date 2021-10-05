@@ -8,10 +8,10 @@
     #})
     cmake
     cowsay
-    deno
+    #deno
     dnsutils
     elixir
-    exa
+    #exa
     fd
     file
     fortune
@@ -36,12 +36,12 @@
     #obs-studio
     #openrgb
     pavucontrol
-    php
+    #php
     pkg-config
     postgresql
     #pup
     python3
-    ripgrep
+    #ripgrep
     #thunderbird
     tokei
     unzip

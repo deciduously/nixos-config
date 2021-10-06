@@ -11,7 +11,7 @@
     #deno
     dnsutils
     elixir
-    #exa
+    exa
     fd
     file
     fortune
@@ -23,7 +23,7 @@
     htop
     hyperfine
     #inputs.status.defaultPackage.${system}
-    #inputs.tangram.defaultPackage.${system}
+    inputs.tangram.defaultPackage.${system}
     jetbrains.pycharm-community
     jq
     killall
@@ -41,7 +41,7 @@
     postgresql
     #pup
     python3
-    #ripgrep
+    ripgrep
     #thunderbird
     tokei
     unzip

@@ -16,6 +16,7 @@ in {
     cargo-flamegraph
     cargo-license
     cargo-outdated
+    cargo-watch
     cargo-udeps
     linuxPackages.perf
     rust

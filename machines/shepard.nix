@@ -119,6 +119,10 @@ inputs.nixpkgs.lib.nixosSystem {
         };
       };
       nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
+      nix.extraOptions = ''
+        keep-outputs = true
+        keep-derivations = true
+      '';
     })
     inputs.home-manager.nixosModules.home-manager {
       home-manager.useGlobalPkgs = true;

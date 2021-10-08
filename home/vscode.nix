@@ -111,7 +111,7 @@
       "editor.codeActionsOnSave" = { "source.fixAll" = true; };
       "editor.codeLens" = true;
       "editor.find.cursorMoveOnType" = false;
-      "editor.fontSize" = 16;
+      "editor.fontSize" = 12;
       "editor.formatOnSave" = true;
       "editor.minimap.enabled" = true;
       "editor.multiCursorModifier" = "ctrlCmd";

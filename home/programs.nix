@@ -32,6 +32,7 @@
     neovim
     nodejs-16_x
     nodePackages.http-server
+    octaveFull
     okular
     #obs-studio
     #openrgb

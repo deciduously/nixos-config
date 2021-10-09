@@ -51,5 +51,6 @@
     #wally-cli
     xh
     zig
+    zoom-us
   ];
 }

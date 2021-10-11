@@ -45,6 +45,7 @@
     #pup
     python3
     ripgrep
+    slack
     #thunderbird
     tokei
     unzip

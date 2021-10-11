@@ -17,6 +17,7 @@
     fortune
     gcc
     gh
+    gnome.cheese
     #gnome3.adwaita-icon-theme
     gnumake
     hexyl

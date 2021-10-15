@@ -7,6 +7,11 @@
     shellAliases = {
       ls = "exa";
       top = "htop";
+      e = "nvim";
+      h = "history";
+      tree = "exa -T";
+      u = "cd ..";
+      p = "bat";
     };
   };
   programs.direnv = {

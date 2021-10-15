@@ -1,5 +1,6 @@
 user:
 { ... }: {
+  #nixpkgs.config.allowUnsupportedSystem = true;
   imports = [
     ./alacritty.nix
     ./bash
@@ -10,7 +11,7 @@ user:
     ./gpg.nix
     ./htop.nix
     #./lf
-    #./neovim
+    ./neovim
     ./pass.nix
     #(import ./pim.nix user)
     ./programs.nix

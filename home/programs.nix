@@ -10,6 +10,7 @@
     cmake
     cowsay
     #deno
+    discord
     dnsutils
     elixir
     exa

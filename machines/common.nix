@@ -5,8 +5,10 @@ inputs:
     experimental-features = nix-command flakes
   '';
 
-  nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnsupportedSystem = true;
+  };
   nix.binaryCaches = lib.mkForce [
     "https://cache.nixos.org/"
     "https://nix-community.cachix.org"

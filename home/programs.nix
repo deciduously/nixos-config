@@ -52,6 +52,7 @@
     usbutils
     vim
     #wally-cli
+    wdisplays
     xh
     zig
     zoom-us

@@ -99,7 +99,7 @@ inputs.nixpkgs.lib.nixosSystem {
       ];
       #powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
       hardware = {
-        #video.hidpi.enable = lib.mkDefault true;
+        video.hidpi.enable = lib.mkDefault true;
         opengl.extraPackages = with pkgs; [
           intel-media-driver
           vaapiIntel

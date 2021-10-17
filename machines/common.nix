@@ -26,7 +26,9 @@ inputs:
     enable = true;
     secretKeyFile = "/etc/nix-serve.private.key";
   };
+  # FAILS TO BUILD SWAY
   #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay-egl ];
+  nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
 
   security.sudo.wheelNeedsPassword = false;
 
@@ -62,7 +64,7 @@ inputs:
     kmscon = {
       enable = true;
       hwRender = true;
-      extraOptions = "--font-dpi=96";
+      extraOptions = "--font-dpi=192";
     };
     openssh = {
       enable = true;

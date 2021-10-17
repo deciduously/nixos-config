@@ -6,7 +6,7 @@ user:
     ./bash
     ./bat.nix
     (import ./firefox.nix user)
-    #./fzf.nix
+    ./fzf.nix
     (import ./git.nix user)
     ./gpg.nix
     ./htop.nix
@@ -18,8 +18,8 @@ user:
     ./rust.nix
     #./spotify.nix
     ./ssh.nix
-    #./sway
-    #./tmux
+    ./sway
+    ./tmux
     ./vscode.nix
     ./xdg.nix
     #./zsh

@@ -1,15 +1,15 @@
 { inputs, pkgs, system, ... }: {
   home.packages = with pkgs; [
     #aerc
-    #awscli2
+    awscli2
     binutils
     bitwarden
-    #(pkgs.chromium.override {
-    #  commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode";
-    #})
+    (pkgs.chromium.override {
+      commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode";
+    })
     cmake
     cowsay
-    #deno
+    deno
     discord
     dnsutils
     elixir
@@ -20,12 +20,12 @@
     gcc
     gh
     gnome.cheese
-    #gnome3.adwaita-icon-theme
+    gnome3.adwaita-icon-theme
     gnumake
     hexyl
     htop
     hyperfine
-    #inputs.status.defaultPackage.${system}
+    inputs.status.defaultPackage.${system}
     inputs.tangram.defaultPackage.${system}
     jetbrains.pycharm-community
     jq
@@ -40,7 +40,6 @@
     #obs-studio
     #openrgb
     pavucontrol
-    #php
     pkg-config
     postgresql
     #pup

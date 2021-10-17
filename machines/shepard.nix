@@ -104,21 +104,21 @@ inputs.nixpkgs.lib.nixosSystem {
           vaapiIntel
         ];
         pulseaudio.enable = false; #uses pipewire instead
-        nvidia.modesetting.enable = true;
+        #nvidia.modesetting.enable = true;
         bluetooth.enable = true;
       };
       sound.enable = true;
-      services = {
-        xserver = {
-	        dpi = 96;
-          enable = true;
-          videoDrivers = [ "nvidia" ];
-          displayManager.sddm.enable = true;
-          desktopManager.plasma5.enable = true;
-          layout = "us";
-        };
-      };
-      nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
+      #services = {
+      #  xserver = {
+	        #dpi = 96;
+         #enable = true;
+          #videoDrivers = [ "nouveau" ];
+          #displayManager.sddm.enable = true;
+          #desktopManager.plasma5.enable = true;
+      #    layout = "us";
+       # };
+      #};
+      #nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
       nix.extraOptions = ''
         keep-outputs = true
         keep-derivations = true

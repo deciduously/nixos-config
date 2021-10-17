@@ -10,9 +10,12 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
-    #status = {
-    #  url = "path:./status";
-    #};
+    nixpkgs-wayland  = {
+      url = "github:nix-community/nixpkgs-wayland";
+    };
+    status = {
+      url = "path:./status";
+    };
     tangram = {
       url = "github:tangramdotdev/tangram/v0.7.0";
     };

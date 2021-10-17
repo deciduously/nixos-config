@@ -13,17 +13,20 @@ inputs:
     "https://cache.nixos.org/"
     "https://nix-community.cachix.org"
     "https://tangram.cachix.org"
+    "https://nixpkgs-wayland.cachix.org"
     #"http://babyshark:5000"
   ];
   nix.binaryCachePublicKeys = [
     "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     "tangram.cachix.org-1:NQ5Uzhhbrgi4R6A0JoljrMg8X4a2doTv3WrSnajJANs="
     #"babyshark:oaz6/nqu5aJkyh1TkdUHcRH1ggGDgrjQs37NmQLF5ug="
+    "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
   ];
   services.nix-serve = {
     enable = true;
     secretKeyFile = "/etc/nix-serve.private.key";
   };
+  nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
 
   security.sudo.wheelNeedsPassword = false;
 
@@ -54,12 +57,12 @@ inputs:
   };
 
   services = {
-    #dbus.packages = with pkgs; [ gnome3.dconf gcr ];
+    dbus.packages = with pkgs; [ gnome3.dconf gcr ];
     fwupd.enable = true;
     kmscon = {
       enable = true;
       hwRender = true;
-      #extraOptions = "--font-dpi=192";
+      extraOptions = "--font-dpi=96";
     };
     openssh = {
       enable = true;
@@ -78,38 +81,38 @@ inputs:
     udisks2.enable = true;
   };
 
-  #programs.sway = {
-  #  enable = true;
-  #  wrapperFeatures.gtk = true;
-  #  extraPackages = with pkgs; [
-  #    gnome3.adwaita-icon-theme
-  #  ];
-  #};
-  #services.greetd = {
-  #  enable = true;
-  #  restart = true;
-  #  settings = {
-  #    default_session = {
-  #      command = "sway --config /etc/greetd/sway";
-  #    };
-  #  };
-  #};
-  #environment.etc."greetd/sway".text = ''
-  #  exec systemctl --user import-environment
-  #  output * background #000000 solid_color
-  #  output * scale 1.5
-  #  bindsym mod4+q exec swaynag \
-  #    -t warning \
-  #    -b 'Poweroff' 'systemctl poweroff' \
-  #    -b 'Reboot' 'systemctl reboot'
-  #  seat seat0 xcursor_theme Adwaita
-  #  exec "GTK_THEME=Adwaita:dark ${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -s /etc/greetd/gtkgreet.css -c sway; swaymsg exit"
-  #'';
-  #environment.etc."greetd/gtkgreet.css".text = ''
-  #  window { background-color: #000000; }
-  #'';
-  #users.users.greeter.group = "greeter";
-  #users.groups.greeter = {};
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    extraPackages = with pkgs; [
+      gnome3.adwaita-icon-theme
+    ];
+  };
+  services.greetd = {
+    enable = true;
+    restart = true;
+    settings = {
+      default_session = {
+        command = "sway --config /etc/greetd/sway";
+      };
+    };
+  };
+  environment.etc."greetd/sway".text = ''
+    exec systemctl --user import-environment
+    output * background #000000 solid_color
+    output * scale 1.5
+    bindsym mod4+q exec swaynag \
+      -t warning \
+      -b 'Poweroff' 'systemctl poweroff' \
+      -b 'Reboot' 'systemctl reboot'
+    seat seat0 xcursor_theme Adwaita
+    exec "GTK_THEME=Adwaita:dark ${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -s /etc/greetd/gtkgreet.css -c sway; swaymsg exit"
+  '';
+  environment.etc."greetd/gtkgreet.css".text = ''
+    window { background-color: #000000; }
+  '';
+  users.users.greeter.group = "greeter";
+  users.groups.greeter = {};
 
   environment.systemPackages = with pkgs; [
     git
@@ -121,7 +124,7 @@ inputs:
   #  PS1="$ "
   #'';
   programs.dconf.enable = true;
-  #security.pam.services.swaylock = {};
+  security.pam.services.swaylock = {};
   services.fprintd.enable = true;
 
   fonts = {

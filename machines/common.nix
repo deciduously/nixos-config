@@ -26,7 +26,7 @@ inputs:
     enable = true;
     secretKeyFile = "/etc/nix-serve.private.key";
   };
-  nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
+  #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay-egl ];
 
   security.sudo.wheelNeedsPassword = false;
 

@@ -56,7 +56,7 @@ bar {
 		focused_workspace #333333 #333333 #bbbbbb
 		statusline #bbbbbb
 	}
-	font 16px
+	font 12px
 	position top
 	status_command status
 }

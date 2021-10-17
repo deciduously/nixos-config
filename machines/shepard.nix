@@ -7,7 +7,7 @@ inputs.nixpkgs.lib.nixosSystem {
   modules = [
     { system.stateVersion = "21.05"; }
     (import ./common.nix inputs)
-    ({ pkgs, lib, ... }: {
+    ({ pkgs, lib, config, ... }: {
       networking = {
         hostName = "shepard";
         interfaces.enp0s31f6.useDHCP = true;
@@ -43,6 +43,7 @@ inputs.nixpkgs.lib.nixosSystem {
           luks.devices.crypt.device = "/dev/nvme0n1p4";
           verbose = false;
         };
+#        kernelPackages = pkgs.linuxPackages.nvidia_x11;
         kernelModules = [ "kvm-intel" ];
         kernelParams = [
           "quiet"
@@ -98,26 +99,29 @@ inputs.nixpkgs.lib.nixosSystem {
       ];
       #powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
       hardware = {
-        video.hidpi.enable = lib.mkDefault true;
+        #video.hidpi.enable = lib.mkDefault true;
         opengl.extraPackages = with pkgs; [
           intel-media-driver
           vaapiIntel
         ];
         pulseaudio.enable = false; #uses pipewire instead
-        #nvidia.modesetting.enable = true;
+        nvidia = {
+ #         package = config.boot.kernelPackages.nvidiaPackages.beta;
+          modesetting.enable = true;
+        };
         bluetooth.enable = true;
       };
       sound.enable = true;
-      #services = {
-      #  xserver = {
-	        #dpi = 96;
-         #enable = true;
-          #videoDrivers = [ "nouveau" ];
-          #displayManager.sddm.enable = true;
-          #desktopManager.plasma5.enable = true;
-      #    layout = "us";
-       # };
-      #};
+#      services = {
+#        xserver = {
+#	        dpi = 96;
+#         enable = true;
+#          videoDrivers = [ "nvidia" ];
+#          #displayManager.sddm.enable = true;
+#          #desktopManager.plasma5.enable = true;
+#          layout = "us";
+#       };
+#    };
       #nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
       nix.extraOptions = ''
         keep-outputs = true

@@ -111,18 +111,18 @@ inputs.nixpkgs.lib.nixosSystem {
         };
         bluetooth.enable = true;
       };
-      sound.enable = true;
-#      services = {
-#        xserver = {
-#	        dpi = 96;
-#         enable = true;
-#          videoDrivers = [ "nvidia" ];
-#          #displayManager.sddm.enable = true;
-#          #desktopManager.plasma5.enable = true;
-#          layout = "us";
-#       };
-#    };
-      #nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
+      sound.enable = false;
+      services = {
+        xserver = {
+	        dpi = 96;
+         enable = true;
+          videoDrivers = [ "nvidia" ];
+          displayManager.sddm.enable = true;
+          desktopManager.plasma5.enable = true;
+          layout = "us";
+       };
+    };
+      nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
       nix.extraOptions = ''
         keep-outputs = true
         keep-derivations = true

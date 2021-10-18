@@ -28,7 +28,8 @@ inputs:
   };
   # FAILS TO BUILD SWAY
   #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay-egl ];
-  nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
+  # CODE DOENS'T LAUNCH
+  #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
 
   security.sudo.wheelNeedsPassword = false;
 
@@ -83,38 +84,38 @@ inputs:
     udisks2.enable = true;
   };
 
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    extraPackages = with pkgs; [
-      gnome3.adwaita-icon-theme
-    ];
-  };
-  services.greetd = {
-    enable = true;
-    restart = true;
-    settings = {
-      default_session = {
-        command = "sway --config /etc/greetd/sway";
-      };
-    };
-  };
-  environment.etc."greetd/sway".text = ''
-    exec systemctl --user import-environment
-    output * background #000000 solid_color
-    output * scale 1.5
-    bindsym mod4+q exec swaynag \
-      -t warning \
-      -b 'Poweroff' 'systemctl poweroff' \
-      -b 'Reboot' 'systemctl reboot'
-    seat seat0 xcursor_theme Adwaita
-    exec "GTK_THEME=Adwaita:dark ${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -s /etc/greetd/gtkgreet.css -c sway; swaymsg exit"
-  '';
-  environment.etc."greetd/gtkgreet.css".text = ''
-    window { background-color: #000000; }
-  '';
-  users.users.greeter.group = "greeter";
-  users.groups.greeter = {};
+  #programs.sway = {
+  #  enable = true;
+  #  wrapperFeatures.gtk = true;
+  #  extraPackages = with pkgs; [
+  #    gnome3.adwaita-icon-theme
+  #  ];
+  #};
+  #services.greetd = {
+  #  enable = true;
+  #  restart = true;
+  #  settings = {
+  #    default_session = {
+  #      command = "sway --config /etc/greetd/sway";
+  #    };
+  #  };
+  #};
+  #environment.etc."greetd/sway".text = ''
+  #  exec systemctl --user import-environment
+  #  output * background #000000 solid_color
+  #  output * scale 1.5
+  #  bindsym mod4+q exec swaynag \
+  #    -t warning \
+  #    -b 'Poweroff' 'systemctl poweroff' \
+  #    -b 'Reboot' 'systemctl reboot'
+  #  seat seat0 xcursor_theme Adwaita
+  #  exec "GTK_THEME=Adwaita:dark ${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -s /etc/greetd/gtkgreet.css -c sway; swaymsg exit"
+  #'';
+  #environment.etc."greetd/gtkgreet.css".text = ''
+  #  window { background-color: #000000; }
+  #'';
+  #users.users.greeter.group = "greeter";
+  #users.groups.greeter = {};
 
   environment.systemPackages = with pkgs; [
     git
@@ -126,7 +127,7 @@ inputs:
   #  PS1="$ "
   #'';
   programs.dconf.enable = true;
-  security.pam.services.swaylock = {};
+  #security.pam.services.swaylock = {};
   services.fprintd.enable = true;
 
   fonts = {

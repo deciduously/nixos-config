@@ -32,6 +32,7 @@
     killall
     libreoffice-fresh
     mpv
+    msitools
     neovim
     nodejs-16_x
     nodePackages.http-server

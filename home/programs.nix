@@ -19,6 +19,7 @@
     fortune
     gcc
     gh
+    gimp
     gnome.cheese
     gnome3.adwaita-icon-theme
     gnumake

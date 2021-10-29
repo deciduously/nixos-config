@@ -8,7 +8,6 @@
       commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode";
     })
     cmake
-    conda
     cowsay
     deno
     discord
@@ -31,7 +30,6 @@
     inputs.tangram.defaultPackage.${system}
     jetbrains.pycharm-community
     jq
-    jupyter
     killall
     libreoffice-fresh
     mpv

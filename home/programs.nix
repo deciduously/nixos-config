@@ -57,6 +57,7 @@
     vim
     #wally-cli
     wdisplays
+    xar
     xh
     zig
     zoom-us

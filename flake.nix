@@ -10,9 +10,9 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
-    nixpkgs-wayland  = {
-      url = "github:nix-community/nixpkgs-wayland";
-    };
+#    nixpkgs-wayland  = {
+#      url = "github:nix-community/nixpkgs-wayland";
+#    };
     status = {
       url = "path:./status";
     };

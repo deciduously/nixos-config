@@ -36,3 +36,7 @@ $ git clone git@github.com:deciduously/nixos-config.git
 ```
 
 Use the included scripts to update/rebuild/clean.
+
+## Notes
+
+* If `sddm` fails to load after a Plasma update, try clearing the cache: `rm -rf /var/lib/sddm/.cache/sddm-greeter/qmlcache`.  Sudo didn't cut it for me, I needed to switch to root.

@@ -106,7 +106,7 @@ inputs.nixpkgs.lib.nixosSystem {
         ];
         pulseaudio.enable = false; #uses pipewire instead
         nvidia = {
- #         package = config.boot.kernelPackages.nvidiaPackages.beta;
+          # package = config.boot.kernelPackages.nvidiaPackages.beta;
           modesetting.enable = true;
         };
         bluetooth.enable = true;

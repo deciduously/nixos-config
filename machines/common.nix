@@ -36,7 +36,7 @@ inputs:
   networking = {
     useDHCP = false;
   #  networkmanager.enable = true;
-    #firewall.trustedInterfaces = ["tailscale0"];
+    firewall.trustedInterfaces = ["tailscale0"];
     #hosts = {
     #  "100.94.50.82" = [ "babybeluga" ];
     #  "100.100.213.21" = [ "babyshark" ];
@@ -77,7 +77,7 @@ inputs:
       pulse.enable = true;
     };
     printing.enable = true;
-    #tailscale.enable = true;
+    tailscale.enable = true;
     udev.packages = [
       pkgs.yubikey-personalization
     ];

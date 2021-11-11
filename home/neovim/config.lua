@@ -1,1 +1,2 @@
 require('hello')
+set number

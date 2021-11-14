@@ -44,6 +44,7 @@
     pavucontrol
     pkg-config
     postgresql
+    projectlibre
     #pup
     python3
     ripgrep

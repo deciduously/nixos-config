@@ -114,12 +114,13 @@ inputs.nixpkgs.lib.nixosSystem {
       sound.enable = false;
       services = {
         xserver = {
-	        dpi = 96;
-         enable = true;
+	  dpi = 96;
+          enable = true;
           videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;
           desktopManager.plasma5.enable = true;
           layout = "us";
+	  xkbOptions = "ctrl:swapcaps";
        };
     };
       nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;

@@ -12,7 +12,7 @@ user:
     ./htop.nix
     #./lf
     ./neovim
-    ./pass.nix
+    #./pass.nix
     #(import ./pim.nix user)
     ./programs.nix
     ./rust.nix

@@ -8,6 +8,7 @@
       ls = "exa";
       top = "htop";
       e = "nvim";
+			f = "lf";
       h = "history";
       tree = "exa -T";
       u = "cd ..";

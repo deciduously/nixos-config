@@ -32,7 +32,6 @@
     libreoffice-fresh
     mpv
     msitools
-    neovim
     nodejs-16_x
     nodePackages.http-server
     octaveFull
@@ -49,6 +48,7 @@
     rstudio
     sd
     slack
+		tmux
     #thunderbird
     tokei
     unzip

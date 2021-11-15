@@ -10,8 +10,8 @@ user:
     (import ./git.nix user)
     ./gpg.nix
     ./htop.nix
-    #./lf
-    ./neovim
+    ./lf
+    ./nvim
     #./pass.nix
     #(import ./pim.nix user)
     ./programs.nix

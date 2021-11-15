@@ -100,10 +100,15 @@ inputs.nixpkgs.lib.nixosSystem {
       #powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
       hardware = {
         video.hidpi.enable = lib.mkDefault true;
-        opengl.extraPackages = with pkgs; [
-          intel-media-driver
-          vaapiIntel
-        ];
+        opengl = {
+	  enable = true;
+	  extraPackages = with pkgs; [
+            intel-media-driver
+            vaapiIntel
+	    vaapiVdpau
+	    libvdpau-va-gl
+	  ];
+	};
         pulseaudio.enable = false; #uses pipewire instead
         nvidia = {
           # package = config.boot.kernelPackages.nvidiaPackages.beta;

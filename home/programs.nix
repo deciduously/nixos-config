@@ -4,9 +4,7 @@
     awscli2
     binutils
     bitwarden
-    (pkgs.chromium.override {
-      commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode";
-    })
+    chromium
     cmake
     cowsay
     deno

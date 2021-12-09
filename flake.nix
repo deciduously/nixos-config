@@ -22,7 +22,8 @@
   };
   outputs = inputs: {
     nixosConfigurations = {
-      shepard = import ./machines/shepard.nix inputs;
+      mordin = import ./machine/mordin.nix inputs;
+			shepard = import ./machines/shepard.nix inputs;
     };
   };
 }

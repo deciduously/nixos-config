@@ -58,6 +58,7 @@
     wdisplays
     xar
     xh
+		xournalpp
     zig
     zoom-us
   ];

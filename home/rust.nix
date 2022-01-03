@@ -8,6 +8,7 @@ let
     stable.rust-std
     stable.rustc
     stable.rustfmt-preview
+		targets.wasm32-unknown-unknown.stable.rust-std
   ]);
 in {
   home.packages = with pkgs; [

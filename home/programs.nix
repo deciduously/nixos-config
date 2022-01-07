@@ -29,7 +29,7 @@
     jetbrains.pycharm-community
     jq
     killall
-    libreoffice-fresh
+    #libreoffice-fresh
     mpv
     msitools
     nodejs-16_x
@@ -48,6 +48,7 @@
     rstudio
     sd
     slack
+		sqlite
 		tmux
     #thunderbird
     tokei

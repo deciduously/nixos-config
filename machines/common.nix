@@ -78,9 +78,9 @@ inputs:
     };
     printing.enable = true;
     tailscale.enable = true;
-    udev.packages = [
-      pkgs.yubikey-personalization
-    ];
+    #udev.packages = [
+    #  pkgs.yubikey-personalization
+    #];
     udisks2.enable = true;
   };
 

@@ -1,9 +1,9 @@
 user:
 { pkgs, ... }: {
-  home.packages = with pkgs; [
-    yubikey-manager
-    yubikey-personalization
-  ];
+  #home.packages = with pkgs; [
+  #  yubikey-manager
+    #yubikey-personalization
+  #];
   programs.gpg = {
     enable = true;
   };

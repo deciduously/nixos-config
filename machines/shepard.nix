@@ -118,8 +118,11 @@ inputs.nixpkgs.lib.nixosSystem {
       };
       sound.enable = false;
       services = {
+				postgresql = {
+					enable = true;
+				};
         xserver = {
-	  dpi = 96;
+	  			dpi = 96;
           enable = true;
           videoDrivers = [ "nvidia" ];
           displayManager.sddm.enable = true;

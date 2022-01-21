@@ -60,7 +60,7 @@ inputs:
   };
 
   services = {
-    dbus.packages = with pkgs; [ gnome3.dconf gcr ];
+    dbus.packages = with pkgs; [ dconf gcr ];
     fwupd.enable = true;
     kmscon = {
       enable = true;

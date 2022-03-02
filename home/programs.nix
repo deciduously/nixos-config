@@ -38,6 +38,7 @@
     okular
     #obs-studio
     #openrgb
+		patchelf
     pavucontrol
     pkg-config
     postgresql

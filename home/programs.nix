@@ -10,6 +10,7 @@
     deno
     discord
     dnsutils
+		earthly
     elixir
     exa
     fd

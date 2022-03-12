@@ -41,6 +41,7 @@
     #openrgb
 		patchelf
     pavucontrol
+		podman-compose
     pkg-config
     postgresql
     projectlibre

@@ -60,6 +60,7 @@
     vim
     #wally-cli
     wdisplays
+		weechat
     xar
     xh
 		xournalpp

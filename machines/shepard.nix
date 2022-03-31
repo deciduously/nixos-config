@@ -101,13 +101,11 @@ inputs.nixpkgs.lib.nixosSystem {
       hardware = {
         video.hidpi.enable = lib.mkDefault true;
         opengl = {
-	  enable = true;
-	  extraPackages = with pkgs; [
-            intel-media-driver
-            vaapiIntel
-	    vaapiVdpau
-	    libvdpau-va-gl
-	  ];
+        enable = true;
+        #extraPackages = with pkgs; [
+        #  vaapiVdpau
+        #  libvdpau-va-gl
+	  #];
 	};
         pulseaudio.enable = false; #uses pipewire instead
         nvidia = {

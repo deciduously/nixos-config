@@ -10,8 +10,8 @@
     deno
     discord
     dnsutils
-		earthly
     elixir
+		emacs
     exa
     fd
     file

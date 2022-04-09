@@ -5,7 +5,9 @@
       inputs.fenix.packages.${system}.rust-analyzer-vscode-extension
       pkgs.vscode-extensions.bbenoist.nix
       pkgs.vscode-extensions.esbenp.prettier-vscode
+      pkgs.vscode-extensions.justusadam.language-haskell
       pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
+      pkgs.vscode-extensions.streetsidesoftware.code-spell-checker
       pkgs.vscode-extensions.vscodevim.vim
     ];
     keybindings = [

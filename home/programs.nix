@@ -50,6 +50,8 @@
     ripgrep
     rstudio
     sd
+    shellcheck
+		skopeo
     slack
 		sqlite
 		tmux

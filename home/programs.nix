@@ -49,6 +49,7 @@
     python3
     ripgrep
     rstudio
+    runc
     sd
     shellcheck
 		skopeo
@@ -57,6 +58,7 @@
 		tmux
     #thunderbird
     tokei
+    umoci
     unzip
     usbutils
     vim

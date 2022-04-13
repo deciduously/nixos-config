@@ -48,7 +48,7 @@
     #pup
     python3
     ripgrep
-    rstudio
+    #rstudio
     runc
     sd
     shellcheck

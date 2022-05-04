@@ -61,6 +61,7 @@
     umoci
     unzip
     usbutils
+		valgrind
     vim
     #wally-cli
     wdisplays

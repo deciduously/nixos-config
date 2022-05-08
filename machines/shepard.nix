@@ -116,6 +116,7 @@ inputs.nixpkgs.lib.nixosSystem {
       };
       sound.enable = false;
       services = {
+				gnome.gnome-keyring.enable = true;
 				postgresql = {
 					enable = true;
 				};

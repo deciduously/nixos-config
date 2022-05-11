@@ -33,6 +33,7 @@
     libreoffice-fresh
     libgnome-keyring
     libsecret
+    llvm_14
     mpv
     msitools
     nodejs-16_x

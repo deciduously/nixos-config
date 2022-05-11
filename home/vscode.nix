@@ -1,6 +1,16 @@
 { pkgs, inputs, system, ... }: {
   programs.vscode = {
     enable = true;
+    package =
+      (pkgs.vscode.override {
+        isInsiders = true;
+      }).overrideAttrs (oldAttrs: rec {
+        pname = "vscode-insiders";
+        src = builtins.fetchTarball {
+          url = "https://update.code.visualstudio.com/latest/linux-x64/insider";
+          sha256 = "0d87gkrj75xpssvcg2lyqp9745bca5jl0rx3fxq98gqw9pprghjq";
+          };
+      });
     extensions = [
       inputs.fenix.packages.${system}.rust-analyzer-vscode-extension
       pkgs.vscode-extensions.bbenoist.nix
@@ -134,6 +144,7 @@
       "javascript.updateImportsOnFileMove.enabled" = "always";
       "liveshare.showVerboseNotifications" = false;
       "remote.SSH.useLocalServer" = false;
+      "rust-analyzer.checkOnSave.command" = "clippy";
       "rust-analyzer.inlayHints.enable" = true;
       "typescript.updateImportsOnFileMove.enabled" = "always";
       "update.mode" = "none";

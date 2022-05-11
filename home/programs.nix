@@ -31,6 +31,8 @@
     jq
     killall
     libreoffice-fresh
+    libgnome-keyring
+    libsecret
     mpv
     msitools
     nodejs-16_x
@@ -67,6 +69,7 @@
     wdisplays
 		weechat
     xar
+    xdg-utils
     xh
 		xournalpp
     zig

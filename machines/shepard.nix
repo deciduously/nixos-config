@@ -9,6 +9,7 @@ inputs.nixpkgs.lib.nixosSystem {
     (import ./common.nix inputs)
     ({ pkgs, lib, config, ... }: {
       networking = {
+        firewall.checkReversePath = "loose";
         hostName = "shepard";
         interfaces.enp0s31f6.useDHCP = true;
         interfaces.wlp4s0.useDHCP = true;
@@ -130,7 +131,6 @@ inputs.nixpkgs.lib.nixosSystem {
 	  xkbOptions = "ctrl:swapcaps";
        };
     };
-      nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
       nix.extraOptions = ''
         keep-outputs = true
         keep-derivations = true

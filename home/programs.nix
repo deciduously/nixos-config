@@ -30,6 +30,7 @@
     jetbrains.pycharm-community
     jq
     killall
+    libelf
     libreoffice-fresh
     libgnome-keyring
     libsecret
@@ -74,6 +75,7 @@
     xh
 		xournalpp
     zig
+    zlib
     zoom-us
   ];
 }
